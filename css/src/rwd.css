@@ -1,0 +1,41 @@
+/* rwd.css */
+body{background-color:#ccc;}
+#wrap{transition:all 500ms;}
+
+
+
+/* mobile */
+@media screen and (max-width:640px) {
+  body{background-color:#faa; transition:all 500ms;}
+  #wrap{width:100%; height: 500px; background-color:#aff;}
+}
+
+
+
+
+/* tablet */
+@media screen and (min-width:641px) and (max-width:1024px) {
+  body{background-color:#afa; transition:all 500ms;}
+  #wrap{width:90%; height: 30vw; margin: 0 auto; background-color:#aaf;
+        /* vw: 가로화면의 %기준으로 처리, 즉 가로화면 전체의 30%만큼의 크기를 높이값으로 설정. */
+        /* ex) 디자인 작업 시, width 650px, height 100px만큼 작업했다면,, 
+               공식 : 사용크기/기준(브라우저가로)*100vw  
+                       100    /  650 * 100 vw  =>  15.384615vw  */}
+}
+
+
+
+/*pc*/
+@media screen and (min-width:1025px), print {
+  /* print할때도 하기 값을 적용하겠습니다.!! 라는 뜻... */
+  body{transition:all 500ms;}
+  #wrap{width: 960px;margin:0 auto; background-color:#ffa; padding-top:1.3rem;}
+
+}
+
+
+
+/*pcFull*/
+@media screen and (min-width:1367px) {
+  #wrap{width:90%; height:50vw; background-color:#0aa;}
+}
